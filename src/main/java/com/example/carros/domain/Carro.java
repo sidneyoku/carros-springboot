@@ -1,0 +1,66 @@
+package com.example.carros.domain;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@NoArgsConstructor
+@Entity
+@Data
+public class Carro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String tipo;
+    private String descricao;
+    private String url_foto;
+    private String url_video;
+    private String latitude;
+    private String longitude;
+
+    /**
+     * Aula 36: O projeto lombok
+     * Aqui foi tirado construtor padrão como também o contrutor com parâmetros
+     * Foi tirado os getters e setters
+     * Foram retirados pois o lombok se encarrega de tudo isso.
+     */
+    /**
+     *   public Carro() {}
+     *
+     *   public Carro(Long id, String nome) {
+     *       this.id = id;
+     *       this.nome = nome;
+     *   }
+     *
+     *  public Long getId() {
+     *      return id;
+     *  }
+     *
+     *  public void setId(Long id) {
+     *      this.id = id;
+     *  }
+     *
+     *  public String getNome() {
+     *      return nome;
+     *  }
+     *
+     *  public void setNome(String nome) {
+     *      this.nome = nome;
+     *  }
+     *
+     *  public String getTipo() {
+     *      return tipo;
+     *  }
+     *
+     *  public void setTipo(String tipo) {
+     *      this.tipo = tipo;
+     *  }
+     **/
+}
